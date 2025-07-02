@@ -332,7 +332,6 @@
     text-align: center;
     color: #c1440e;
     background-color: #fff;
-    height: 550px;
 }
 .contact-section h2 {
     font-size: 32px;
@@ -407,6 +406,8 @@
 .social-icons {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .social-icons a {
     color: #666;
@@ -500,4 +501,113 @@
 }
 .footer-bottom {
     width: 100%;
+}
+
+
+/* =======================
+   Responsive Styles (Mobile)
+   ======================= */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-content {
+    margin: 0;
+    text-align: center;
+    height: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-grid,
+  .stats-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .values {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropbtn {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+/* =======================
+   Responsive Navbar Styles
+   ======================= */
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .primary-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+  }
+
+  .primary-nav.active {
+    display: flex;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+
+  .primary-nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+  }
 }
